@@ -8,72 +8,65 @@ interface TeamMember {
   image: string;
   audioUrl: string;
   buttonText: string;
-  gradient: string;
 }
 
 const receptionists: TeamMember[] = [
   {
     id: 'jessica',
     name: 'Jessica — The Luxe Concierge',
-    title: 'Grace, elegance, and VIP treatment — Perfect for high-end luxury brands and clients who expect nothing less.',
+    title: 'Elegant, polished, perfect for high-end brands.',
     quote: '"Hello lovely, I\'ll treat every client like a VIP."',
     image: 'https://res.cloudinary.com/dliallqso/image/upload/v1758720760/ai_image_1_za8cf5.png',
     audioUrl: 'https://res.cloudinary.com/dliallqso/video/upload/v1758710442/Jessica_a0uxgs.mp3',
-    buttonText: 'Meet the Luxe Concierge',
-    gradient: 'from-purple-500 to-purple-600'
+    buttonText: 'Meet Elegant'
   },
   {
     id: 'maya',
     name: 'Maya — The Glow Getter',
-    title: 'Confident, bold, and effortlessly glamorous — Keeps beauty clients coming back for more.',
+    title: 'Bold, glamorous, keeps beauty clients coming back.',
     quote: '"Hey babe, ready to rebook your glow-up?"',
     image: 'https://res.cloudinary.com/dliallqso/image/upload/v1758720813/ai_image_2_lxyhqg.png',
     audioUrl: 'https://res.cloudinary.com/dliallqso/video/upload/v1758710539/Maya_apdykk.mp3',
-    buttonText: 'Meet the Glow Getter',
-    gradient: 'from-fuchsia-500 to-fuchsia-600'
+    buttonText: 'Meet Glam'
   },
   {
     id: 'nia',
     name: 'Nia — The Wellness Oracle',
-    title: 'Soothing, calming, and intuitive — The perfect balance for wellness brands needing a peaceful presence.',
+    title: 'Calm, intuitive, creates trust and reassurance.',
     quote: '"Take a deep breath — I\'ll keep your calendar balanced."',
     image: 'https://res.cloudinary.com/dliallqso/image/upload/v1758720870/ai_image_3_bt3xlj.png',
     audioUrl: 'https://res.cloudinary.com/dliallqso/video/upload/v1758710600/Nia_wrf0jn.mp3',
-    buttonText: 'Meet the Wellness Oracle',
-    gradient: 'from-emerald-500 to-emerald-600'
+    buttonText: 'Meet Calm'
   }
 ];
 
 const salesAgents: TeamMember[] = [
   {
-    id: 'jay',
-    name: 'Jay — The Charming Closer',
-    title: 'Charming, persuasive, and an expert at converting leads into loyal clients.',
-    quote: '"Let me handle the tough calls — I\'ll win them over for you."',
-    image: 'https://res.cloudinary.com/dliallqso/image/upload/v1758720988/ai_image_5_oub6jc.png',
-    audioUrl: 'https://res.cloudinary.com/dliallqso/video/upload/v1758710774/Jay_wvhhnc.mp3',
-    buttonText: 'Meet the Charming Closer',
-    gradient: 'from-blue-500 to-blue-600'
-  },
-  {
     id: 'leo',
     name: 'Leo — The Quiet Genius',
-    title: 'Thoughtful, focused, and always one step ahead — Keeps your business running smoothly behind the scenes.',
+    title: 'Smart, thoughtful, quietly keeps things running.',
     quote: '"I\'ll organise it all — you\'ll barely notice me working."',
     image: 'https://res.cloudinary.com/dliallqso/image/upload/v1758720931/ai_image_4_rndfth.png',
     audioUrl: 'https://res.cloudinary.com/dliallqso/video/upload/v1758710663/Lola_gl5qxr.mp3',
-    buttonText: 'Meet the Quiet Genius',
-    gradient: 'from-gray-600 to-gray-700'
+    buttonText: 'Meet Genius'
+  },
+  {
+    id: 'jay',
+    name: 'Jay — The Charming Closer',
+    title: 'Confident, persuasive, perfect for sales calls.',
+    quote: '"Let me handle the tough calls — I\'ll win them over for you."',
+    image: 'https://res.cloudinary.com/dliallqso/image/upload/v1758720988/ai_image_5_oub6jc.png',
+    audioUrl: 'https://res.cloudinary.com/dliallqso/video/upload/v1758710774/Jay_wvhhnc.mp3',
+    buttonText: 'Meet Charming'
   },
   {
     id: 'luke',
     name: 'Luke — The Efficient Expert',
-    title: 'Sharp, no-nonsense, and incredibly efficient — Your schedule, your business, perfectly organized.',
+    title: 'Sharp, direct, keeps calendars full without fuss.',
     quote: '"Fast, clean, efficient — your schedule is safe with me."',
     image: 'https://res.cloudinary.com/dliallqso/image/upload/v1758721024/ai_image_6_kcpznd.png',
     audioUrl: 'https://res.cloudinary.com/dliallqso/video/upload/v1758710832/Luke_dneuli.mp3',
-    buttonText: 'Meet the Efficient Expert',
-    gradient: 'from-gold-500 to-gold-600'
+    buttonText: 'Meet Sharp'
   }
 ];
 
@@ -84,33 +77,31 @@ const TeamCard = ({ member }: { member: TeamMember }) => {
   };
 
   return (
-    <div className="group bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-6 hover:scale-105 border border-gold-200/50 backdrop-blur-sm relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-gold-50/30 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-      <div className="relative h-80 overflow-hidden">
+    <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-[#FF2D96]">
+      <div className="relative h-48 overflow-hidden bg-gray-50">
         <img 
           src={member.image} 
           alt={member.name}
-          className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110"
+          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
         />
-        <div className={`absolute inset-0 bg-gradient-to-t ${member.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
       </div>
       
-      <div className="p-8 relative z-10">
-        <h3 className="font-['Playfair_Display'] text-2xl font-bold mb-4 text-black group-hover:text-black transition-colors duration-300">
+      <div className="p-5">
+        <h3 className="font-['Montserrat'] text-base font-bold mb-2 text-black leading-tight">
           {member.name}
         </h3>
-        <p className="text-gray-600 mb-5 font-medium text-base leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+        <p className="text-gray-700 mb-3 font-medium text-sm leading-relaxed">
           {member.title}
         </p>
-        <blockquote className="text-gray-700 italic mb-6 text-base leading-relaxed border-l-4 border-fuchsia-500 pl-4 group-hover:border-gold-500 transition-colors duration-300">
+        <blockquote className="text-gray-600 italic mb-4 text-sm leading-relaxed border-l-3 border-[#FF2D96] pl-3">
           {member.quote}
         </blockquote>
         <button 
           onClick={playAudio}
-          className={`w-full bg-gradient-to-r ${member.gradient} text-white px-6 py-4 rounded-2xl font-bold hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl border border-white/20 hover:from-gold-500 hover:to-gold-600`}
+          className="w-full bg-[#FF2D96] text-white px-4 py-2.5 rounded-lg font-semibold hover:bg-[#e0267d] transition-all duration-300 flex items-center justify-center gap-2 shadow-sm text-sm"
         >
-          <Play size={18} />
+          <Play size={16} className="text-white" />
           {member.buttonText}
         </button>
       </div>
@@ -120,34 +111,20 @@ const TeamCard = ({ member }: { member: TeamMember }) => {
 
 const TeamSection = () => {
   return (
-    <section id="team" className="py-24 bg-gradient-to-br from-white via-gold-50/20 to-white">
+    <section id="team" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-gold-100 to-fuchsia-100 rounded-full mb-8 border border-gold-200">
-            <span className="text-black font-semibold">Luxury AI Personalities</span>
-          </div>
-          <h2 className="font-['Playfair_Display'] text-4xl md:text-6xl font-bold text-black mb-6">
-            Meet Your AI Receptionists & Sales Agents
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
-            Six distinct personalities. Each one charming, professional, and trained to match your brand's sophisticated style.
-          </p>
-        </div>
-
         {/* Receptionist Boutique */}
         <div className="mb-20">
-          <div className="bg-gradient-to-r from-gold-50 to-fuchsia-50 rounded-3xl p-12 mb-16 max-w-6xl mx-auto border border-gold-200 shadow-xl">
-            <h3 className="font-['Playfair_Display'] text-3xl font-bold text-black mb-6">
-              Receptionist <span className="font-script text-fuchsia-500">Boutique™</span>
-            </h3>
-            <p className="text-lg text-gray-700 font-light leading-relaxed">
-              Discover the future of customer service with AI receptionists designed to reflect the grandeur of your brand. 
-              Our character-driven agents are always polite, always polished, and always available to deliver exceptional 
-              service that leaves a lasting impression.
+          <div className="text-center mb-16">
+            <h2 className="font-['Montserrat'] text-4xl md:text-5xl font-bold text-black mb-6">
+              Receptionist <span className="font-script text-[#FF2D96]">Boutique™</span>
+            </h2>
+            <p className="text-lg text-black font-medium leading-relaxed max-w-4xl mx-auto">
+              We offer a character-driven AI service designed to handle all your calls, re-engage no-shows, and keep your schedule full. Our receptionists are not just bots but personalities that fit your brand. You can choose from six stunning avatars, each with a unique tone and style to match the atmosphere of your business.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {receptionists.map((member) => (
               <TeamCard key={member.id} member={member} />
             ))}
@@ -156,18 +133,28 @@ const TeamSection = () => {
 
         {/* Sales Boutique */}
         <div>
-          <div className="bg-gradient-to-r from-fuchsia-50 to-gold-50 rounded-3xl p-12 mb-16 max-w-6xl mx-auto border border-fuchsia-200 shadow-xl">
-            <h3 className="font-['Playfair_Display'] text-3xl font-bold text-black mb-6">
-              Sales <span className="font-script text-fuchsia-500">Boutique™</span>
+          <div className="text-center mb-16">
+            <h3 className="font-['Montserrat'] text-3xl md:text-4xl font-bold text-black mb-6">
+              Target Audience
             </h3>
-            <p className="text-lg text-gray-700 font-light leading-relaxed">
-              From appointments to follow-ups, our AI sales agents are your ultimate assistants, working tirelessly 
-              to ensure every lead is nurtured and every sale is closed. No more missed opportunities, only smooth, 
-              professional client interactions.
+            <div className="text-lg text-black font-medium leading-relaxed max-w-4xl mx-auto space-y-3">
+              <p>• Medspas, beauty clinics, and salons losing revenue from no-shows.</p>
+              <p>• Real estate professionals who miss calls after hours.</p>
+              <p>• Coaches, consultants, and high-ticket businesses that need smooth follow-up.</p>
+              <p>• Any premium brand that values personality as much as performance.</p>
+            </div>
+          </div>
+
+          <div className="text-center mb-16">
+            <h2 className="font-['Montserrat'] text-4xl md:text-5xl font-bold text-black mb-6">
+              Sales <span className="font-script text-[#FF2D96]">Boutique™</span>
+            </h2>
+            <p className="text-lg text-black font-medium leading-relaxed max-w-4xl mx-auto">
+              Your boutique AI sales team works around the clock to follow up, qualify, and set appointments. Smooth talkers without the overhead, they keep pipelines moving and calendars booked.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {salesAgents.map((member) => (
               <TeamCard key={member.id} member={member} />
             ))}
