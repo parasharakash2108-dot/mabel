@@ -43,25 +43,25 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-10">
             <button 
               onClick={() => scrollToSection('team')}
-              className="font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-fuchsia-600"
+              className="font-medium transition-all duration-300 hover:scale-105 text-black hover:text-fuchsia-500"
             >
               Our Team
             </button>
             <button 
               onClick={() => scrollToSection('analytics')}
-              className="font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-fuchsia-600"
+              className="font-medium transition-all duration-300 hover:scale-105 text-black hover:text-fuchsia-500"
             >
               Analytics
             </button>
             <button 
               onClick={() => scrollToSection('pricing')}
-              className="font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-fuchsia-600"
+              className="font-medium transition-all duration-300 hover:scale-105 text-black hover:text-fuchsia-500"
             >
               Pricing
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-fuchsia-600"
+              className="font-medium transition-all duration-300 hover:scale-105 text-black hover:text-fuchsia-500"
             >
               Contact
             </button>
@@ -71,7 +71,7 @@ const Header = () => {
           <div className="md:hidden">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="transition-colors duration-300 text-gray-700"
+              className="transition-colors duration-300 text-black"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -84,25 +84,25 @@ const Header = () => {
             <div className="px-4 py-6 space-y-4">
               <button 
                 onClick={() => scrollToSection('team')}
-                className="block w-full text-left py-3 text-gray-700 hover:text-amber-600 font-medium transition-colors"
+                className="block w-full text-left py-3 text-black hover:text-fuchsia-500 font-medium transition-colors"
               >
                 Our Team
               </button>
               <button 
                 onClick={() => scrollToSection('analytics')}
-                className="block w-full text-left py-3 text-gray-700 hover:text-amber-600 font-medium transition-colors"
+                className="block w-full text-left py-3 text-black hover:text-fuchsia-500 font-medium transition-colors"
               >
                 Analytics
               </button>
               <button 
                 onClick={() => scrollToSection('pricing')}
-                className="block w-full text-left py-3 text-gray-700 hover:text-amber-600 font-medium transition-colors"
+                className="block w-full text-left py-3 text-black hover:text-fuchsia-500 font-medium transition-colors"
               >
                 Pricing
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left py-3 text-gray-700 hover:text-amber-600 font-medium transition-colors"
+                className="block w-full text-left py-3 text-black hover:text-fuchsia-500 font-medium transition-colors"
               >
                 Contact
               </button>

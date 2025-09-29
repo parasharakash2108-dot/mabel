@@ -29,13 +29,14 @@ const Benefits = () => {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center px-6 py-3 bg-fuchsia-50 rounded-full mb-8 border border-fuchsia-200">
+          <div className="inline-flex items-center px-6 py-3 bg-white rounded-full mb-8 border border-fuchsia-500">
             <span className="text-black font-bold">Luxury Advantages</span>
           </div>
           <h2 className="font-['Playfair_Display'] text-4xl md:text-6xl font-bold text-black mb-6">
             Top 3 Benefits of BA <span className="font-script text-fuchsia-500">Boutique</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-semibold">
+          <p className="text-xl text-black max-w-3xl mx-auto font-semibold">
             Experience the transformative power of luxury AI that elevates your business operations 
             through measurable, sustainable improvements.
           </p>
@@ -45,7 +46,7 @@ const Benefits = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-fuchsia-200"
+              className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-fuchsia-500 hover:border-fuchsia-500"
             >
               <div>
                 <div className="mb-6 text-fuchsia-500">
@@ -53,7 +54,7 @@ const Benefits = () => {
                 </div>
                 
                 <div className="mb-4">
-                  <div className="inline-flex items-center px-4 py-2 bg-fuchsia-50 rounded-full text-sm font-bold text-black mb-4 border border-fuchsia-200">
+                  <div className="inline-flex items-center px-4 py-2 bg-white rounded-full text-sm font-bold text-black mb-4 border border-fuchsia-500">
                     {benefit.stats}
                   </div>
                 </div>
@@ -61,7 +62,7 @@ const Benefits = () => {
                 <h3 className="font-['Playfair_Display'] text-xl font-bold mb-4 text-black leading-tight">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-700 font-medium leading-relaxed text-base">
+                <p className="text-black font-medium leading-relaxed text-base">
                   {benefit.description}
                 </p>
               </div>
@@ -70,14 +71,14 @@ const Benefits = () => {
         </div>
 
         <div className="mt-20 text-center">
-          <div className="bg-fuchsia-50 rounded-2xl p-12 max-w-4xl mx-auto border border-fuchsia-200 shadow-lg">
+          <div className="bg-white rounded-2xl p-12 max-w-4xl mx-auto border border-fuchsia-500 shadow-lg">
             <h3 className="font-['Playfair_Display'] text-2xl font-bold text-black mb-4">
               Ready to Transform Your Business Operations?
             </h3>
-            <p className="text-gray-700 mb-8 font-semibold">
+            <p className="text-black mb-8 font-semibold">
               Join hundreds of premium businesses already leveraging luxury AI to achieve unprecedented growth and efficiency.
             </p>
-            <button className="bg-fuchsia-500 text-white px-10 py-4 rounded-xl font-semibold hover:bg-fuchsia-600 transition-all duration-300 shadow-lg">
+            <button className="bg-fuchsia-500 text-white px-10 py-4 rounded-xl font-semibold hover:bg-fuchsia-500 transition-all duration-300 shadow-lg">
               Schedule Strategic Consultation
             </button>
           </div>

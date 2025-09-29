@@ -11,69 +11,69 @@ const Footer = () => {
                 <span className="font-heading tracking-tight">BA </span>
                 <span className="font-script text-fuchsia-500">Boutique</span>
               </h3>
-              <p className="text-gray-400 font-light leading-relaxed max-w-md">
+              <p className="text-white font-light leading-relaxed max-w-md">
                 Sophisticated AI receptionists and sales agents that elevate your business operations 
                 with unparalleled professionalism and efficiency.
               </p>
             </div>
             
             <div className="space-y-4">
-              <div className="flex items-center gap-3 text-gray-300">
-                <Mail className="w-5 h-5 text-amber-600" />
+              <div className="flex items-center gap-3 text-white">
+                <Mail className="w-5 h-5 text-fuchsia-500" />
                 <span>hello@bookedandautomated.co</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-300">
-                <Phone className="w-5 h-5 text-amber-600" />
+              <div className="flex items-center gap-3 text-white">
+                <Phone className="w-5 h-5 text-fuchsia-500" />
                 <span>Available 24/7 via AI</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-300">
-                <MapPin className="w-5 h-5 text-amber-600" />
+              <div className="flex items-center gap-3 text-white">
+                <MapPin className="w-5 h-5 text-fuchsia-500" />
                 <span>Serving Premium Businesses Globally</span>
               </div>
             </div>
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg mb-6 text-amber-600">Services</h4>
+            <h4 className="font-semibold text-lg mb-6 text-fuchsia-500">Services</h4>
             <ul className="space-y-3">
-              <li><a href="#team" className="text-gray-400 hover:text-white transition-colors font-light">AI Receptionists</a></li>
-              <li><a href="#team" className="text-gray-400 hover:text-white transition-colors font-light">AI Sales Agents</a></li>
-              <li><a href="#analytics" className="text-gray-400 hover:text-white transition-colors font-light">Analytics & Insights</a></li>
-              <li><a href="#pricing" className="text-gray-400 hover:text-white transition-colors font-light">Investment Plans</a></li>
+              <li><a href="#team" className="text-white hover:text-fuchsia-500 transition-colors font-light">AI Receptionists</a></li>
+              <li><a href="#team" className="text-white hover:text-fuchsia-500 transition-colors font-light">AI Sales Agents</a></li>
+              <li><a href="#analytics" className="text-white hover:text-fuchsia-500 transition-colors font-light">Analytics & Insights</a></li>
+              <li><a href="#pricing" className="text-white hover:text-fuchsia-500 transition-colors font-light">Investment Plans</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg mb-6 text-amber-600">Company</h4>
+            <h4 className="font-semibold text-lg mb-6 text-fuchsia-500">Company</h4>
             <ul className="space-y-3">
-              <li><span className="text-gray-400 font-light">Booked & Automated Boutique</span></li>
-              <li><span className="text-gray-400 font-light">AI-Powered Business Solutions</span></li>
-              <li><span className="text-gray-400 font-light">Always On, Always Polished</span></li>
+              <li><span className="text-white font-light">Booked & Automated Boutique</span></li>
+              <li><span className="text-white font-light">AI-Powered Business Solutions</span></li>
+              <li><span className="text-white font-light">Always On, Always Polished</span></li>
             </ul>
             
             <div className="mt-8">
-              <h5 className="font-semibold mb-4 text-amber-600">Connect</h5>
+              <h5 className="font-semibold mb-4 text-fuchsia-500">Connect</h5>
               <a 
                 href="https://www.instagram.com/bookedandautomated.co/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-2xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-amber-500/25"
+                className="inline-flex items-center justify-center w-12 h-12 bg-fuchsia-500 rounded-2xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-fuchsia-500/25"
               >
-                <Instagram size={20} className="text-black" />
+                <Instagram size={20} className="text-white" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-fuchsia-500 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 font-light">
+            <p className="text-white font-light">
               &copy; 2024 Booked & Automated Boutique. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+            <div className="flex gap-6 text-sm text-white">
+              <a href="#" className="hover:text-fuchsia-500 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-fuchsia-500 transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-fuchsia-500 transition-colors">Cookie Policy</a>
             </div>
           </div>
         </div>
