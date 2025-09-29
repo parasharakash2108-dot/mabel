@@ -36,6 +36,7 @@ const Benefits = () => {
             Top 3 Benefits of BA <span className="font-script text-fuchsia-500">Boutique</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto font-semibold">
+          </p>
           <p className="text-xl text-black max-w-3xl mx-auto font-semibold">
             Experience the transformative power of luxury AI that elevates your business operations 
             through measurable, sustainable improvements.
