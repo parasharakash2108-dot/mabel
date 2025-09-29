@@ -33,8 +33,10 @@ const Header = () => {
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <h1 className="text-2xl font-heading font-bold text-black">
-              <span className="font-heading tracking-tight text-black">BA </span>
+            <h1 className={`text-2xl font-heading font-bold transition-colors duration-300 ${
+              isScrolled ? 'text-black' : 'text-white'
+            }`}>
+              <span className="font-heading tracking-tight">BA </span>
               <span className="font-script text-fuchsia-500">Boutique</span>
             </h1>
           </div>
@@ -43,25 +45,41 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-10">
             <button 
               onClick={() => scrollToSection('team')}
-              className="font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-fuchsia-600"
+              className={`font-medium transition-all duration-300 hover:scale-105 ${
+                isScrolled 
+                  ? 'text-gray-700 hover:text-amber-600' 
+                  : 'text-white/90 hover:text-amber-300'
+              }`}
             >
               Our Team
             </button>
             <button 
               onClick={() => scrollToSection('analytics')}
-              className="font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-fuchsia-600"
+              className={`font-medium transition-all duration-300 hover:scale-105 ${
+                isScrolled 
+                  ? 'text-gray-700 hover:text-amber-600' 
+                  : 'text-white/90 hover:text-amber-300'
+              }`}
             >
               Analytics
             </button>
             <button 
               onClick={() => scrollToSection('pricing')}
-              className="font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-fuchsia-600"
+              className={`font-medium transition-all duration-300 hover:scale-105 ${
+                isScrolled 
+                  ? 'text-gray-700 hover:text-amber-600' 
+                  : 'text-white/90 hover:text-amber-300'
+              }`}
             >
               Pricing
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-fuchsia-600"
+              className={`font-medium transition-all duration-300 hover:scale-105 ${
+                isScrolled 
+                  ? 'text-gray-700 hover:text-amber-600' 
+                  : 'text-white/90 hover:text-amber-300'
+              }`}
             >
               Contact
             </button>
@@ -71,7 +89,9 @@ const Header = () => {
           <div className="md:hidden">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="transition-colors duration-300 text-gray-700"
+              className={`transition-colors duration-300 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
+              }`}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
