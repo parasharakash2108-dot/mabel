@@ -84,30 +84,33 @@ const TeamCard = ({ member }: { member: TeamMember }) => {
   };
 
   return (
-    <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-fuchsia-200">
-      <div className="relative h-64 overflow-hidden">
+    <div className="group bg-white rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-700 hover:-translate-y-6 hover:scale-105 border border-gold-200/50 backdrop-blur-sm relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-gold-50/30 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+      <div className="relative h-80 overflow-hidden">
         <img 
           src={member.image} 
           alt={member.name}
-          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110"
         />
+        <div className={`absolute inset-0 bg-gradient-to-t ${member.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       </div>
       
-      <div className="p-6">
-        <h3 className="font-['Playfair_Display'] text-xl font-bold mb-3 text-black">
+      <div className="p-8 relative z-10">
+        <h3 className="font-['Playfair_Display'] text-2xl font-bold mb-4 text-black group-hover:text-black transition-colors duration-300">
           {member.name}
         </h3>
-        <p className="text-gray-600 mb-4 font-medium text-sm leading-relaxed">
+        <p className="text-gray-600 mb-5 font-medium text-base leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
           {member.title}
         </p>
-        <blockquote className="text-gray-700 italic mb-4 text-sm leading-relaxed border-l-4 border-fuchsia-500 pl-4">
+        <blockquote className="text-gray-700 italic mb-6 text-base leading-relaxed border-l-4 border-fuchsia-500 pl-4 group-hover:border-gold-500 transition-colors duration-300">
           {member.quote}
         </blockquote>
         <button 
           onClick={playAudio}
-          className="w-full bg-fuchsia-500 text-white px-4 py-3 rounded-xl font-semibold hover:bg-fuchsia-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
+          className={`w-full bg-gradient-to-r ${member.gradient} text-white px-6 py-4 rounded-2xl font-bold hover:scale-105 transition-all duration-500 flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl border border-white/20 hover:from-gold-500 hover:to-gold-600`}
         >
-          <Play size={16} className="text-white" />
+          <Play size={18} />
           {member.buttonText}
         </button>
       </div>

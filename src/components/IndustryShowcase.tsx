@@ -7,7 +7,7 @@ const IndustryShowcase = () => {
   const industries = [
     {
       name: 'Medical Spas',
-      icon: <Sparkles className="w-5 h-5" />,
+      icon: '💆‍♀️',
       description: 'Luxury medical spa experiences with AI-powered elegance',
       image: 'https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=800',
       stats: {
@@ -31,7 +31,7 @@ const IndustryShowcase = () => {
     },
     {
       name: 'Beauty Salons',
-      icon: <Star className="w-5 h-5" />,
+      icon: '💄',
       description: 'Glamorous beauty experiences with personality-driven AI',
       image: 'https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800',
       stats: {
@@ -55,7 +55,7 @@ const IndustryShowcase = () => {
     },
     {
       name: 'Wellness Centers',
-      icon: <Users className="w-5 h-5" />,
+      icon: '🧘‍♀️',
       description: 'Serene wellness journeys with calming AI interactions',
       image: 'https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=800',
       stats: {
@@ -79,7 +79,7 @@ const IndustryShowcase = () => {
     },
     {
       name: 'Real Estate',
-      icon: <TrendingUp className="w-5 h-5" />,
+      icon: '🏠',
       description: 'Premium property services with efficient AI management',
       image: 'https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=800',
       stats: {
@@ -103,7 +103,7 @@ const IndustryShowcase = () => {
     },
     {
       name: 'Executive Coaching',
-      icon: <Clock className="w-5 h-5" />,
+      icon: '💼',
       description: 'High-performance coaching with persuasive AI sales support',
       image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
       stats: {
@@ -127,7 +127,7 @@ const IndustryShowcase = () => {
     },
     {
       name: 'Aesthetic Clinics',
-      icon: <ArrowRight className="w-5 h-5" />,
+      icon: '✨',
       description: 'Premium aesthetic services with behind-the-scenes AI efficiency',
       image: 'https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=800',
       stats: {
@@ -226,9 +226,7 @@ const IndustryShowcase = () => {
           <div className="space-y-8">
             <div>
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-fuchsia-500 rounded-xl flex items-center justify-center text-white">
-                  {industries[activeIndustry].icon}
-                </div>
+                <span className="text-4xl">{industries[activeIndustry].icon}</span>
                 <h3 className="text-3xl font-bold text-gray-900">
                   {industries[activeIndustry].name}
                 </h3>

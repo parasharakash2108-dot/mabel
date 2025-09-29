@@ -1,27 +1,10 @@
-import react from "@vitejs/plugin-react-swc";
-import path from "path";
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-  server:{
-    port:5177
-  },
-  build: {
-    lib: {
-      entry: path.resolve(__dirname, 'src/widget.tsx'), 
-      name: 'ReactWidget',
-      fileName: 'react-widget-mabel',
-      formats: ['iife'], 
-    },
-    rollupOptions: {
-      output: { 
-      },
-    },
+  optimizeDeps: {
+    exclude: ['lucide-react'],
   },
 });
