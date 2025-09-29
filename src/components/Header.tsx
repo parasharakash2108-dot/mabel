@@ -26,16 +26,16 @@ const Header = () => {
     <header 
       className={`fixed w-full top-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-gray-200' 
-          : 'bg-white/95 backdrop-blur-xl'
+          ? 'bg-white/95 backdrop-blur-xl shadow-2xl border-b border-gray-100' 
+          : 'bg-transparent'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold">
-              <span className="font-['Montserrat'] tracking-tight text-black">BA </span>
-              <span className="font-script text-[#FF2D96]">Boutique</span>
+            <h1 className="text-2xl font-heading font-bold text-black">
+              <span className="font-heading tracking-tight text-black">BA </span>
+              <span className="font-script text-fuchsia-500">Boutique</span>
             </h1>
           </div>
 
@@ -43,19 +43,25 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-10">
             <button 
               onClick={() => scrollToSection('team')}
-              className="font-medium transition-all duration-300 hover:scale-105 text-black hover:text-[#FF2D96]"
+              className="font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-fuchsia-600"
             >
               Our Team
             </button>
             <button 
+              onClick={() => scrollToSection('analytics')}
+              className="font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-fuchsia-600"
+            >
+              Analytics
+            </button>
+            <button 
               onClick={() => scrollToSection('pricing')}
-              className="font-medium transition-all duration-300 hover:scale-105 text-black hover:text-[#FF2D96]"
+              className="font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-fuchsia-600"
             >
               Pricing
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="font-medium transition-all duration-300 hover:scale-105 text-black hover:text-[#FF2D96]"
+              className="font-medium transition-all duration-300 hover:scale-105 text-gray-700 hover:text-fuchsia-600"
             >
               Contact
             </button>
@@ -65,7 +71,7 @@ const Header = () => {
           <div className="md:hidden">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="transition-colors duration-300 text-black"
+              className="transition-colors duration-300 text-gray-700"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -74,23 +80,29 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200 rounded-b-2xl shadow-lg">
+          <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-gray-100 rounded-b-2xl shadow-2xl">
             <div className="px-4 py-6 space-y-4">
               <button 
                 onClick={() => scrollToSection('team')}
-                className="block w-full text-left py-3 text-black hover:text-[#FF2D96] font-medium transition-colors"
+                className="block w-full text-left py-3 text-gray-700 hover:text-amber-600 font-medium transition-colors"
               >
                 Our Team
               </button>
               <button 
+                onClick={() => scrollToSection('analytics')}
+                className="block w-full text-left py-3 text-gray-700 hover:text-amber-600 font-medium transition-colors"
+              >
+                Analytics
+              </button>
+              <button 
                 onClick={() => scrollToSection('pricing')}
-                className="block w-full text-left py-3 text-black hover:text-[#FF2D96] font-medium transition-colors"
+                className="block w-full text-left py-3 text-gray-700 hover:text-amber-600 font-medium transition-colors"
               >
                 Pricing
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left py-3 text-black hover:text-[#FF2D96] font-medium transition-colors"
+                className="block w-full text-left py-3 text-gray-700 hover:text-amber-600 font-medium transition-colors"
               >
                 Contact
               </button>
