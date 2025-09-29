@@ -119,8 +119,8 @@ const TeamSection = () => {
             <h2 className="font-['Montserrat'] text-4xl md:text-5xl font-bold text-black mb-6">
               Receptionist <span className="font-script text-[#FF2D96]">Boutique™</span>
             </h2>
-            <p className="text-lg text-black font-medium leading-relaxed max-w-4xl mx-auto">
-              We offer a character-driven AI service designed to handle all your calls, re-engage no-shows, and keep your schedule full. Our receptionists are not just bots but personalities that fit your brand. You can choose from six stunning avatars, each with a unique tone and style to match the atmosphere of your business.
+            <p className="text-lg text-gray-700 font-medium leading-relaxed max-w-4xl mx-auto">
+              Your boutique AI receptionists with personality — they answer every call, rebook no-shows, and keep diaries full without payroll headaches. Always warm, always polished, never boring.
             </p>
           </div>
 
@@ -134,22 +134,10 @@ const TeamSection = () => {
         {/* Sales Boutique */}
         <div>
           <div className="text-center mb-16">
-            <h3 className="font-['Montserrat'] text-3xl md:text-4xl font-bold text-black mb-6">
-              Target Audience
-            </h3>
-            <div className="text-lg text-black font-medium leading-relaxed max-w-4xl mx-auto space-y-3">
-              <p>• Medspas, beauty clinics, and salons losing revenue from no-shows.</p>
-              <p>• Real estate professionals who miss calls after hours.</p>
-              <p>• Coaches, consultants, and high-ticket businesses that need smooth follow-up.</p>
-              <p>• Any premium brand that values personality as much as performance.</p>
-            </div>
-          </div>
-
-          <div className="text-center mb-16">
             <h2 className="font-['Montserrat'] text-4xl md:text-5xl font-bold text-black mb-6">
               Sales <span className="font-script text-[#FF2D96]">Boutique™</span>
             </h2>
-            <p className="text-lg text-black font-medium leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg text-gray-700 font-medium leading-relaxed max-w-4xl mx-auto">
               Your boutique AI sales team works around the clock to follow up, qualify, and set appointments. Smooth talkers without the overhead, they keep pipelines moving and calendars booked.
             </p>
           </div>
