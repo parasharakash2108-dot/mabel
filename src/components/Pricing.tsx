@@ -17,14 +17,12 @@ const plans: PricingPlan[] = [
     name: 'Starter',
     price: '£249',
     period: '/mo',
-    description: 'Perfect for solo operators and small salons',
+    description: 'Ideal for solo operators and small salons',
     icon: <Zap className="w-6 h-6" />,
     features: [
-      '1 AI Receptionist Avatar (choose your persona)',
-      '1 channel (calls or SMS/WhatsApp)',
-      'Appointment booking + reminders',
-      'Weekly usage report',
-      'Includes £50 call/message credits (~200 calls or 500 SMS)'
+      'Includes 1 AI receptionist avatar',
+      'Appointment booking',
+      'Weekly usage reports'
     ],
     buttonText: 'Choose Starter'
   },
@@ -32,15 +30,12 @@ const plans: PricingPlan[] = [
     name: 'Pro',
     price: '£699',
     period: '/mo',
-    description: 'Ideal for growing clinics & busy salons',
+    description: 'For growing clinics and busy salons',
     icon: <Star className="w-6 h-6" />,
     features: [
-      '2 Receptionist Avatars (inbound + follow-up)',
-      'Multi-channel (calls + SMS/WhatsApp)',
-      'CRM integration + missed-call reactivation',
-      'Automations & workflow setup',
-      'Monthly KPI report',
-      'Includes £150 call/message credits (~600 calls or 1,500 SMS)'
+      'Includes 2 receptionist avatars',
+      'Multi-channel (calls & SMS/WhatsApp)',
+      'CRM integration'
     ],
     popular: true,
     buttonText: 'Go Pro'
@@ -52,13 +47,9 @@ const plans: PricingPlan[] = [
     description: 'For premium, multi-location practices',
     icon: <Crown className="w-6 h-6" />,
     features: [
-      'All Pro features plus:',
+      'Includes all Pro features plus',
       'Custom voice/dialect tuning',
-      'Outbound campaigns (client reactivation & upsells)',
-      'Full analytics dashboard',
-      'Priority onboarding (7–10 days)',
-      'Dedicated account manager',
-      'Includes £300 call/message credits (~1,200 calls or 3,000 SMS)'
+      'Dedicated account manager'
     ],
     premium: true,
     buttonText: 'Unlock VIP'
@@ -133,7 +124,7 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="font-['Montserrat'] text-4xl md:text-5xl font-bold text-black mb-6">
-            Pricing Table — Receptionist <span className="font-script text-[#FF2D96]">Boutique™</span>
+            Subscription/Pricing Plans
           </h2>
         </div>
 
