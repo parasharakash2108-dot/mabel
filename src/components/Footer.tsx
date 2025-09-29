@@ -1,17 +1,17 @@
-import { Instagram, Mail } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer id="contact" className="bg-black text-white py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
             <div className="mb-6">
               <h3 className="text-2xl font-bold mb-2">
-                <span className="font-['Montserrat'] tracking-tight">Booked & Automated </span>
-                <span className="font-script text-[#FF2D96]">Boutique</span>
+                <span className="font-heading tracking-tight">BA </span>
+                <span className="font-script text-fuchsia-500">Boutique</span>
               </h3>
-              <p className="text-white font-medium leading-relaxed max-w-md">
+              <p className="text-white font-light leading-relaxed max-w-md">
                 Sophisticated AI receptionists and sales agents that elevate your business operations 
                 with unparalleled professionalism and efficiency.
               </p>
@@ -19,30 +19,62 @@ const Footer = () => {
             
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-white">
-                <Mail className="w-5 h-5 text-[#FF2D96]" />
+                <Mail className="w-5 h-5 text-fuchsia-500" />
                 <span>hello@bookedandautomated.co</span>
+              </div>
+              <div className="flex items-center gap-3 text-white">
+                <Phone className="w-5 h-5 text-fuchsia-500" />
+                <span>Available 24/7 via AI</span>
+              </div>
+              <div className="flex items-center gap-3 text-white">
+                <MapPin className="w-5 h-5 text-fuchsia-500" />
+                <span>Serving Premium Businesses Globally</span>
               </div>
             </div>
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg mb-6 text-[#FF2D96]">Connect</h4>
-            <a 
-              href="https://www.instagram.com/bookedandautomated.co/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-12 h-12 bg-[#FF2D96] rounded-2xl hover:scale-110 transition-all duration-300 shadow-lg"
-            >
-              <Instagram size={20} className="text-white" />
-            </a>
+            <h4 className="font-semibold text-lg mb-6 text-fuchsia-500">Services</h4>
+            <ul className="space-y-3">
+              <li><a href="#team" className="text-white hover:text-fuchsia-500 transition-colors font-light">AI Receptionists</a></li>
+              <li><a href="#team" className="text-white hover:text-fuchsia-500 transition-colors font-light">AI Sales Agents</a></li>
+              <li><a href="#analytics" className="text-white hover:text-fuchsia-500 transition-colors font-light">Analytics & Insights</a></li>
+              <li><a href="#pricing" className="text-white hover:text-fuchsia-500 transition-colors font-light">Investment Plans</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg mb-6 text-fuchsia-500">Company</h4>
+            <ul className="space-y-3">
+              <li><span className="text-white font-light">Booked & Automated Boutique</span></li>
+              <li><span className="text-white font-light">AI-Powered Business Solutions</span></li>
+              <li><span className="text-white font-light">Always On, Always Polished</span></li>
+            </ul>
+            
+            <div className="mt-8">
+              <h5 className="font-semibold mb-4 text-fuchsia-500">Connect</h5>
+              <a 
+                href="https://www.instagram.com/bookedandautomated.co/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-12 h-12 bg-fuchsia-500 rounded-2xl hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-fuchsia-500/25"
+              >
+                <Instagram size={20} className="text-white" />
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-[#FF2D96] pt-8">
-          <div className="text-center">
-            <p className="text-white font-medium">
+        <div className="border-t border-fuchsia-500 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-white font-light">
               &copy; 2024 Booked & Automated Boutique. All rights reserved.
             </p>
+            <div className="flex gap-6 text-sm text-white">
+              <a href="#" className="hover:text-fuchsia-500 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-fuchsia-500 transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-fuchsia-500 transition-colors">Cookie Policy</a>
+            </div>
           </div>
         </div>
       </div>
