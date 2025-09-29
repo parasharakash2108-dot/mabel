@@ -1,6 +1,3 @@
-import { useState } from 'react';
-import LeadForm from './LeadForm';
-
 const Hero = () => {
   const scrollToDemo = () => {
     const element = document.getElementById('demo');

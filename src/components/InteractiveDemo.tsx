@@ -1,21 +1,12 @@
 import { Phone, Sparkles, Play } from 'lucide-react';
-import { useState } from 'react';
-import LeadForm from './LeadForm';
 
 const InteractiveDemo = () => {
-  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
-
-  const openLeadForm = () => {
-    setIsLeadFormOpen(true);
-  };
-
-  const closeLeadForm = () => {
-    setIsLeadFormOpen(false);
+  const startDemo = () => {
+    alert('📞 Connecting to Jessica AI...\n\n*Ring ring*\n\n🎵 "Hello lovely, this is Jessica! I can help you book an appointment, answer questions about our services, or reschedule if needed. How may I assist you today?"\n\n✨ Experience the future of customer service with personality!');
   };
 
   return (
-    <>
-      <section id="demo" className="py-24 bg-gradient-to-br from-black via-fuchsia-900/30 to-black text-white relative overflow-hidden">
+    <section id="demo" className="py-24 bg-gradient-to-br from-black via-fuchsia-900/30 to-black text-white relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-fuchsia-600/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-gold-600/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
@@ -42,7 +33,7 @@ const InteractiveDemo = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <button 
-                onClick={openLeadForm}
+                onClick={startDemo}
                 className="group bg-gradient-to-r from-fuchsia-500 to-fuchsia-600 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:from-gold-500 hover:to-gold-600 hover:text-black hover:scale-105 transition-all duration-500 shadow-2xl flex items-center gap-4 border border-fuchsia-400/30"
               >
                 <Phone size={24} />
@@ -51,7 +42,7 @@ const InteractiveDemo = () => {
               </button>
               
               <button 
-                onClick={openLeadForm}
+                onClick={startDemo}
                 className="border-2 border-gold-500/60 text-gold-400 px-12 py-6 rounded-2xl font-semibold text-xl hover:bg-gold-500/10 hover:border-gold-500 hover:scale-105 transition-all duration-500 backdrop-blur-xl flex items-center gap-3 shadow-xl"
               >
                 <Play size={20} />
@@ -76,10 +67,7 @@ const InteractiveDemo = () => {
           </div>
         </div>
       </div>
-      </section>
-      
-      <LeadForm isOpen={isLeadFormOpen} onClose={closeLeadForm} />
-    </>
+    </section>
   );
 };
 
