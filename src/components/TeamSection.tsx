@@ -120,7 +120,7 @@ const TeamSection = () => {
     <section id="team" className="py-24 bg-gradient-to-br from-white via-gold-50/20 to-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center px-6 py-3 bg-white rounded-full mb-8 border border-fuchsia-500">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-gold-100 to-fuchsia-100 rounded-full mb-8 border border-gold-200">
             <span className="text-black font-semibold">Luxury AI Personalities</span>
           </div>
           <h2 className="font-['Playfair_Display'] text-4xl md:text-6xl font-bold text-black mb-6">
@@ -133,11 +133,11 @@ const TeamSection = () => {
 
         {/* Receptionist Boutique */}
         <div className="mb-20">
-          <div className="bg-white rounded-3xl p-12 mb-16 max-w-6xl mx-auto border border-fuchsia-500 shadow-xl">
+          <div className="bg-gradient-to-r from-gold-50 to-fuchsia-50 rounded-3xl p-12 mb-16 max-w-6xl mx-auto border border-gold-200 shadow-xl">
             <h3 className="font-['Playfair_Display'] text-3xl font-bold text-black mb-6">
               Receptionist <span className="font-script text-fuchsia-500">Boutique™</span>
             </h3>
-            <p className="text-lg text-black font-light leading-relaxed">
+            <p className="text-lg text-gray-700 font-light leading-relaxed">
               Discover the future of customer service with AI receptionists designed to reflect the grandeur of your brand. 
               Our character-driven agents are always polite, always polished, and always available to deliver exceptional 
               service that leaves a lasting impression.
@@ -153,11 +153,11 @@ const TeamSection = () => {
 
         {/* Sales Boutique */}
         <div>
-          <div className="bg-white rounded-3xl p-12 mb-16 max-w-6xl mx-auto border border-fuchsia-500 shadow-xl">
+          <div className="bg-gradient-to-r from-fuchsia-50 to-gold-50 rounded-3xl p-12 mb-16 max-w-6xl mx-auto border border-fuchsia-200 shadow-xl">
             <h3 className="font-['Playfair_Display'] text-3xl font-bold text-black mb-6">
               Sales <span className="font-script text-fuchsia-500">Boutique™</span>
             </h3>
-            <p className="text-lg text-black font-light leading-relaxed">
+            <p className="text-lg text-gray-700 font-light leading-relaxed">
               From appointments to follow-ups, our AI sales agents are your ultimate assistants, working tirelessly 
               to ensure every lead is nurtured and every sale is closed. No more missed opportunities, only smooth, 
               professional client interactions.
