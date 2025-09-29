@@ -67,12 +67,12 @@ const plans: PricingPlan[] = [
 
 const PricingCard = ({ plan }: { plan: PricingPlan }) => {
   return (
-    <div className={`relative bg-white rounded-3xl p-10 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 ${
+    <div className={`relative bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-2 ${
       plan.popular || plan.premium ? 'border-[#FF2D96]' : 'border-gray-200'
     }`}>
       {plan.popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <div className="bg-[#FF2D96] text-white px-8 py-3 rounded-full font-bold text-sm flex items-center gap-2 shadow-xl">
+          <div className="bg-[#FF2D96] text-white px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg">
             <Star size={16} />
             Most Popular
           </div>
@@ -81,7 +81,7 @@ const PricingCard = ({ plan }: { plan: PricingPlan }) => {
       
       {plan.premium && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <div className="bg-black text-white px-8 py-3 rounded-full font-bold text-sm flex items-center gap-2 shadow-xl">
+          <div className="bg-black text-white px-6 py-2 rounded-full font-bold text-sm flex items-center gap-2 shadow-lg">
             <Crown size={16} />
             VIP Concierge
           </div>
@@ -89,36 +89,36 @@ const PricingCard = ({ plan }: { plan: PricingPlan }) => {
       )}
       
       <div className="text-center mb-10">
-        <div className="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center bg-[#FF2D96] text-white shadow-lg">
+        <div className="w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center bg-[#FF2D96] text-white shadow-md">
           {plan.icon}
         </div>
         
-        <h3 className="font-['Montserrat'] text-3xl font-bold text-black mb-3">
+        <h3 className="font-['Montserrat'] text-2xl font-bold text-black mb-3">
           {plan.name}
         </h3>
         <div className="flex items-baseline justify-center mb-4">
-          <span className="text-5xl font-bold text-black">
+          <span className="text-4xl font-bold text-black">
             {plan.price}
           </span>
-          <span className="text-black ml-2 font-medium text-lg">{plan.period}</span>
+          <span className="text-gray-600 ml-2 font-medium text-lg">{plan.period}</span>
         </div>
-        <p className="text-black font-medium text-lg">{plan.description}</p>
+        <p className="text-gray-700 font-medium">{plan.description}</p>
       </div>
 
-      <ul className="space-y-4 mb-10">
+      <ul className="space-y-3 mb-8">
         {plan.features.map((feature, index) => (
           <li key={index} className="flex items-start gap-3">
-            <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 bg-[#FF2D96]">
+            <div className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-1 bg-[#FF2D96]">
               <Check className="w-3 h-3 text-white" />
             </div>
-            <span className="text-black font-medium text-base leading-relaxed">{feature}</span>
+            <span className="text-gray-800 font-medium text-sm leading-relaxed">{feature}</span>
           </li>
         ))}
       </ul>
 
-      <button className={`w-full py-5 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg ${
+      <button className={`w-full py-4 rounded-lg font-bold transition-all duration-300 hover:scale-105 shadow-md ${
         plan.popular || plan.premium
-          ? 'bg-[#FF2D96] text-white hover:bg-black' 
+          ? 'bg-[#FF2D96] text-white hover:bg-[#e0267d]' 
           : 'bg-black text-white hover:bg-[#FF2D96]'
       }`}>
         {plan.buttonText}
@@ -137,7 +137,7 @@ const Pricing = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <PricingCard key={index} plan={plan} />
           ))}

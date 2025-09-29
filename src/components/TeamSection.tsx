@@ -77,28 +77,29 @@ const TeamCard = ({ member }: { member: TeamMember }) => {
   };
 
   return (
-    <div className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-[#FF2D96]">
-      <div className="relative h-48 overflow-hidden">
+    <div className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-[#FF2D96]">
+      <div className="relative h-48 overflow-hidden bg-gray-50">
         <img 
           src={member.image} 
           alt={member.name}
-          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
       </div>
       
-      <div className="p-6">
-        <h3 className="font-['Montserrat'] text-lg font-bold mb-3 text-black">
+      <div className="p-5">
+        <h3 className="font-['Montserrat'] text-base font-bold mb-2 text-black leading-tight">
           {member.name}
         </h3>
-        <p className="text-black mb-4 font-medium text-sm leading-relaxed">
+        <p className="text-gray-700 mb-3 font-medium text-sm leading-relaxed">
           {member.title}
         </p>
-        <blockquote className="text-black italic mb-4 text-sm leading-relaxed border-l-4 border-[#FF2D96] pl-4">
+        <blockquote className="text-gray-600 italic mb-4 text-sm leading-relaxed border-l-3 border-[#FF2D96] pl-3">
           {member.quote}
         </blockquote>
         <button 
           onClick={playAudio}
-          className="w-full bg-[#FF2D96] text-white px-4 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
+          className="w-full bg-[#FF2D96] text-white px-4 py-2.5 rounded-lg font-semibold hover:bg-[#e0267d] transition-all duration-300 flex items-center justify-center gap-2 shadow-sm text-sm"
         >
           <Play size={16} className="text-white" />
           {member.buttonText}
@@ -118,12 +119,12 @@ const TeamSection = () => {
             <h2 className="font-['Montserrat'] text-4xl md:text-5xl font-bold text-black mb-6">
               Receptionist <span className="font-script text-[#FF2D96]">Boutique™</span>
             </h2>
-            <p className="text-lg text-black font-medium leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg text-gray-700 font-medium leading-relaxed max-w-4xl mx-auto">
               Your boutique AI receptionists with personality — they answer every call, rebook no-shows, and keep diaries full without payroll headaches. Always warm, always polished, never boring.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {receptionists.map((member) => (
               <TeamCard key={member.id} member={member} />
             ))}
@@ -136,12 +137,12 @@ const TeamSection = () => {
             <h2 className="font-['Montserrat'] text-4xl md:text-5xl font-bold text-black mb-6">
               Sales <span className="font-script text-[#FF2D96]">Boutique™</span>
             </h2>
-            <p className="text-lg text-black font-medium leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg text-gray-700 font-medium leading-relaxed max-w-4xl mx-auto">
               Your boutique AI sales team works around the clock to follow up, qualify, and set appointments. Smooth talkers without the overhead, they keep pipelines moving and calendars booked.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {salesAgents.map((member) => (
               <TeamCard key={member.id} member={member} />
             ))}

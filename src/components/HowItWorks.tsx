@@ -28,25 +28,25 @@ const HowItWorks = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="text-center p-10 bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-3 border border-gray-200 hover:border-[#FF2D96]"
+              className="text-center p-8 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-[#FF2D96]"
             >
               <div className="relative mb-8">
-                <div className="w-20 h-20 bg-[#FF2D96] rounded-2xl flex items-center justify-center mx-auto shadow-xl">
+                <div className="w-16 h-16 bg-[#FF2D96] rounded-xl flex items-center justify-center mx-auto shadow-lg">
                   {step.icon}
                 </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-black rounded-full flex items-center justify-center text-white font-bold text-sm">
+                <div className="absolute -top-1 -right-1 w-6 h-6 bg-black rounded-full flex items-center justify-center text-white font-bold text-xs">
                   {index + 1}
                 </div>
               </div>
               
-              <h3 className="font-['Montserrat'] text-2xl font-bold mb-4 text-black">
+              <h3 className="font-['Montserrat'] text-xl font-bold mb-4 text-black">
                 {step.title}
               </h3>
-              <p className="text-black font-medium leading-relaxed">
+              <p className="text-gray-700 font-medium leading-relaxed">
                 {step.description}
               </p>
             </div>
